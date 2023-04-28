@@ -1,0 +1,9 @@
+<h1>Messages</h1>
+<p *ngFor='let message of messagesFromBE'>{{message}}</p>
+<form #chatForm="ngForm" (ngSubmit)="onSubmit(chatForm)">
+  <mat-form-field appearance="fill">
+    <mat-label>Input here</mat-label>
+    <input id='message' name='message' ngModel
+           matInput>
+  </mat-form-field>
+</form>
