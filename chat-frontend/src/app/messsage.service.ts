@@ -9,8 +9,6 @@ export class MesssageService {
   constructor(private http:HttpClient) {}
 
   sendMessage(message:string){
-    console.log(message)
-    // this.http.post<any>(`http://localhost:3000/send`,{message})
-    this.http.get<any>(`http://localhost:3000/hello`)
+    this.http.post<any>(`http://localhost:3000/send`,{data:message}).subscribe()
   }
 }
